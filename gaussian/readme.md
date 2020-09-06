@@ -23,5 +23,5 @@ Results from gaussian-exp.py
 
 |             Unsmoothed              |              Smoothed               |
 | :---------------------------------: | :---------------------------------: |
-| ![](exp/unsmooth_gaussian.png) | ![](exp/smooth_gaussian.png) |
+| ![](exp/unsmoothed_gaussian.png) | ![](exp/smoothed_gaussian.png) |
 
