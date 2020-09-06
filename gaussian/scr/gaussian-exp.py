@@ -1,12 +1,14 @@
+import sys
+sys.path.append('src')
 from mnist_dataset import get_mnist
-from gaussian_classifier import gaussian_classifier
+from gaussian import gaussian_classifier
 from sklearn.decomposition import PCA
 import numpy as np
 import matplotlib.pyplot as plt
 
 
 def main():
-    (x_train, y_train), (x_test, y_test) = get_mnist("data/").load_data()
+    (x_train, y_train), (x_test, y_test) = get_mnist("../dat/mnist").load_data()
 
     # 4.1
     print("Gaussian classifier with mnist dataset reduced by PCA")
@@ -29,7 +31,7 @@ def main():
     plt.xticks(pca_components, rotation=70)
     plt.xlabel("PCA Dimensions")
     plt.ylabel("Eror rate")
-    plt.savefig("scripts/results/gc_pca_4-1.png")
+    plt.savefig("exp/unsmoothed_gaussian.png")
     # 4.2
     print("Gaussian classifier with mnist dataset reduced by PCA with smoothing")
     alphas = [0.01, 0.5, 0.9]
@@ -52,7 +54,7 @@ def main():
     plt.xlabel("PCA Dimensions")
     plt.ylabel("Eror rate")
     plt.xticks(pca_components, rotation=70)
-    plt.savefig("scripts/results/gc_pca_4-2.png")
+    plt.savefig("exp/smoothed_gaussian.png")
 
 
 if __name__ == "__main__":
