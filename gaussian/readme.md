@@ -2,8 +2,6 @@
 
 A python implementation of the Gaussian classifier under the src directory.
 
-![](exp/gaussian.jpg)
-
 ## Usage
 
 Gaussian classifier
